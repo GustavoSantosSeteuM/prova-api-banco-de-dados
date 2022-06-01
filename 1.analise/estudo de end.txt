@@ -3,7 +3,7 @@
 
 (1) /POST           /usuario/login
 
-resquest
+resquest body
 {  
 
         " email": "",
@@ -20,11 +20,11 @@ response
 
 }
 
-
+///////////////////////////////////////////////////////
 
 (2) /POST       /filme
 
-request
+request body
 {
         "nome": "",
         "sinopse": "",
@@ -34,8 +34,7 @@ request
         "imagem": "",
         "usuario": 0
 }
-
-response
+response (200)
 {
     "nome": "",
         "sinopse": "",
@@ -46,4 +45,53 @@ response
         "usuario": 0
 }
 
+///////////////////////////////////////////////////////
 
+
+(3) /POST           /filme/:id
+
+resquest body
+{
+
+        "nome": "",
+        "sinopse": "",
+        "avaliacao": 0.0,
+        "lancamento": "2020-10-00",
+        "disponivel": true,
+        "imagem": "",
+        "usuario": 0
+
+}
+
+response (204)
+-- sem conteudo
+
+///////////////////////////////////////////////////////
+
+(4) /DELETE          /filme/:id
+
+response(204)
+
+///////////////////////////////////////////////////////
+
+
+
+
+
+(5)  /GET                 /filme
+
+response
+[
+
+    {
+
+        "nome": "",
+        "avaliacao": 0.0,
+        "lancamento": "2020-10-00",
+        "disponivel": true,
+        "usuario": 0
+
+    }
+    
+
+]
